@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule} from "ng2-bootstrap/ng2-bootstrap";
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
@@ -13,19 +15,26 @@ import { routing } from './app.routing';
 import { Property } from './shared/property';
 import { PropertiesService } from './shared/properties.service';
 import { Angular2TokenService, A2tUiModule} from 'angular2-token';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AlertModule.forRoot(),
+    DropdownModule.forRoot(),
+    CollapseModule
   ],
   providers: [
     PropertiesService,
