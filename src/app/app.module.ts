@@ -18,6 +18,7 @@ import { Angular2TokenService, A2tUiModule} from 'angular2-token';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    UserEditComponent
+    UserEditComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
