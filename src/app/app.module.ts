@@ -22,6 +22,11 @@ import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './shared/search/search.component';
 import { FilterComponent } from './shared/filter/filter.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { PropertyBoxComponent } from './shared/property-box/property-box.component';
+import { MapComponent } from './shared/map/map.component';
+
+import { environment } from '../environments/environment';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,8 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     SearchComponent,
     FilterComponent,
     PaginationComponent,
+    PropertyBoxComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,8 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     DropdownModule.forRoot(),
     DatepickerModule.forRoot(),
     PaginationModule.forRoot(),
-    CollapseModule
+    CollapseModule,
+    AgmCoreModule.forRoot({ apiKey: environment.maps_api_key})
   ],
   providers: [
     PropertiesService,
