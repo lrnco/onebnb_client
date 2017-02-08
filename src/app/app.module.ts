@@ -32,6 +32,7 @@ import { ReservationBoxComponent } from './shared/reservation-box/reservation-bo
 import { LightboxComponent } from './shared/lightbox/lightbox.component';
 import { CommentBoxComponent } from './shared/comment-box/comment-box.component';
 import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box.component';
+import { SendMessageComponent } from './shared/send-message/send-message.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box
     LightboxComponent,
     CommentBoxComponent,
     UserDetailBoxComponent,
+    SendMessageComponent,
   ],
   imports: [
     BrowserModule,
