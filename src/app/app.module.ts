@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule } from "ng2-bootstrap";
+import { DropdownModule, AlertModule, CarouselModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule } from "ng2-bootstrap";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +28,8 @@ import { MapComponent } from './shared/map/map.component';
 import { environment } from '../environments/environment';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
+import { ReservationBoxComponent } from './shared/reservation-box/reservation-box.component';
+import { LightboxComponent } from './shared/lightbox/lightbox.component';
 
 @NgModule({
   declarations: [
@@ -45,17 +47,21 @@ import { PropertyDetailsComponent } from './property/property-details/property-d
     PropertyBoxComponent,
     MapComponent,
     PropertyDetailsComponent,
+    ReservationBoxComponent,
+    LightboxComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
+    CollapseModule, 
     AlertModule.forRoot(),
     DropdownModule.forRoot(),
     DatepickerModule.forRoot(),
     PaginationModule.forRoot(),
-    CollapseModule,
+    CarouselModule.forRoot(),
+    ModalModule.forRoot(),
     AgmCoreModule.forRoot({ apiKey: environment.maps_api_key})
   ],
   providers: [
