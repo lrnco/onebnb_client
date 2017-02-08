@@ -28,7 +28,7 @@ export class PropertiesService {
   }
 
   getProperty(id){
-    return this.http.get(environment.api_base_url + 'properties.json/' + id)
+    return this.http.get(environment.api_base_url + 'properties/' + id + '.json')
       .map(res => res.json());
   }
 
