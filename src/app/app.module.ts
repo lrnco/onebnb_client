@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { DropdownModule, AlertModule, CarouselModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule } from "ng2-bootstrap";
+import { DropdownModule, AlertModule, CarouselModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule, TypeaheadModule } from "ng2-bootstrap";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -61,13 +61,14 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
     FormsModule,
     HttpModule,
     routing,
-    CollapseModule, 
+    CollapseModule,
     AlertModule.forRoot(),
     DropdownModule.forRoot(),
     DatepickerModule.forRoot(),
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    TypeaheadModule.forRoot(),
     AgmCoreModule.forRoot({ apiKey: environment.maps_api_key})
   ],
   providers: [

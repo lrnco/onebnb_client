@@ -22,6 +22,11 @@ export class PropertiesService {
       .map(res => res.json());
   }
 
+  autocomplete(){
+    return this.http.get(environment.api_base_url + 'autocomplete.json')
+      .map(res => res.json());
+  }
+
   getProperties(){
     return this.http.get(environment.api_base_url + 'properties.json')
       .map(res => res.json());
