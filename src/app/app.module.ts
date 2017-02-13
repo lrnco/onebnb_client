@@ -14,7 +14,9 @@ import { routing } from './app.routing';
 
 import { Property } from './shared/property';
 import { PropertiesService } from './shared/properties.service';
+import { UsersService } from './shared/users.service';
 import { Angular2TokenService, A2tUiModule} from 'angular2-token';
+
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
@@ -73,6 +75,7 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
   ],
   providers: [
     PropertiesService,
+    UsersService,
     Angular2TokenService
   ],
   bootstrap: [AppComponent]
