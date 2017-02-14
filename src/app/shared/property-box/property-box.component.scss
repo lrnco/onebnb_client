@@ -32,6 +32,11 @@
     .wishlist-btn{
       border: none;
       background-color: #fff;
+
+      &.disabled .unsigned{
+        color: $template-color-3;
+      }
+
     }
     .signed{
       font-size: 20px;
@@ -41,5 +46,12 @@
       font-size: 20px;
       color: $template-color-1;
     }
+
+     bs-tooltip-container {
+       min-width: 200px;
+     }
+
   }
+
+
 }

@@ -28,7 +28,12 @@
         </button>
       </div>
       <div *ngIf="wishlisted != true">
-        <button href="" (click)="wishlist(true, property_id)" class="wishlist-btn">
+        <button href=""
+                (click)="wishlist($event, true, property_id)"
+                class="wishlist-btn"
+                [ngClass]="{'disabled': isLogged == false}"
+                tooltip="Você precisa estar logado!"
+                [isDisabled]="isLogged">
           <i class="fa fa-heart-o unsigned"></i>
         </button>
       </div>

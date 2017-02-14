@@ -18,6 +18,7 @@ export class ResultsComponent implements OnInit {
   private lat: number = -13.4963582;
   private lng: number = -69.8079044;
   private wishlist: any;
+  private isLogged: boolean = false;
 
   constructor(private PropertiesService: PropertiesService, private route: ActivatedRoute, private UsersService: UsersService, private _tokenService: Angular2TokenService) { }
 
@@ -36,8 +37,11 @@ export class ResultsComponent implements OnInit {
         );
       });
 
+      if(this._tokenService.userSignedIn()) {
+        this.isLogged = true;
+      }
       // Pega a wishlist do usuário se estiver logado
-      if(this._tokenService.userSignedIn() == true)
+      if(this.isLogged)
       {
         this.UsersService.getWishlist()
           .subscribe(data => {
